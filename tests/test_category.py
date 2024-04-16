@@ -6,7 +6,10 @@ from src.products import Product
 
 @pytest.fixture
 def category(product1):
-    return Category("Смартфоны", "Смартфоны, как средство не только коммуникации, но и получение дополнительных функций для удобства жизни", [product1])
+    return Category("Смартфоны",
+                    "Смартфоны, как средство не только коммуникации, но и получение дополнительных функций для удобства жизни",
+                    [product1])
+
 
 @pytest.fixture
 def product1():
@@ -16,7 +19,7 @@ def product1():
 def test__init(category):
     assert category.name == "Смартфоны"
     assert category.description == "Смартфоны, как средство не только коммуникации, но и получение дополнительных функций для удобства жизни"
-    assert category.get_products == "Samsung Galaxy C23 Ultra, 180000.0 руб. Остаток: 5 шт.\n"
+    assert category.products == "Samsung Galaxy C23 Ultra, 180000.0 руб. Остаток: 5 шт.\n"
 
 
 def test_category(category, product1):
@@ -24,4 +27,3 @@ def test_category(category, product1):
     assert Category.counter_product == 1
     category.add_product(product1)
     assert Category.counter_product == 2
-
