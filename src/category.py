@@ -1,3 +1,6 @@
+from src.products import Product
+
+
 class Category:
     name = str
     description = str
@@ -14,8 +17,20 @@ class Category:
         Category.counter_product += len(product)
 
     def add_product(self, product):
-        self.__products.append(product)
-        Category.counter_product += 1
+        if product.quantity == 0:
+            raise ValueError('Количество добавляемого товара не может быть нулевым!')
+        if isinstance(product, Product):
+            self.__products.append(product)
+        else:
+            raise TypeError("Нельзя к продукту добавлять незнакомые объекты!")
+
+        def add_goods(self, value):
+            if value.available == 0:
+                raise ValueError('Количество добавляемого товара не может быть нулевым!')
+            if isinstance(value, Product):
+                self.__goods.append(value)
+            else:
+                raise TypeError("Нельзя к продукту добавлять левые объекты!")
 
     @property
     def products(self):
