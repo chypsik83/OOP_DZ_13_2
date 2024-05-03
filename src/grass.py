@@ -9,3 +9,6 @@ class Grass(Product):
         self.manufacturer = manufacturer
         self.period = period
         self.color = color
+
+    def get_details(self):
+        return f"{self.name} - {self.description}, ${self.price} - {self.description}"

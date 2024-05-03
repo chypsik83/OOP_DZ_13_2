@@ -40,3 +40,5 @@ class Product:
             return self.__price * self.quantity + other.__price * other.quantity
 
         raise TypeError('Нельзя складывать продукты разных типов')
+
+
