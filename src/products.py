@@ -1,4 +1,9 @@
-class Product:
+
+
+from src.abstract_class import BaseProduct
+
+
+class Product(BaseProduct):
     name = str
     description = str
     price = float
@@ -40,5 +45,3 @@ class Product:
             return self.__price * self.quantity + other.__price * other.quantity
 
         raise TypeError('Нельзя складывать продукты разных типов')
-
-
