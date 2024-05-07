@@ -40,5 +40,5 @@ print(Samsung_Galaxy_C23_Ultra)
 smartphone = Smartphone("iPhone 12", "256GB, Серый цвет, 200MP камера", 180000.0, 15, 54, "А15", 256, "Белый")
 lawn_grass = Grass("Bermuda Grass", "Широкая", 1200, 10, "мануфактура", "03,05,2024", "Зеленая")
 
-print(smartphone.get_details())
-print(lawn_grass.get_details())
+print(smartphone)
+print(lawn_grass)
