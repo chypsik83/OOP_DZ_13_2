@@ -7,6 +7,7 @@ class BaseProduct(ABC):
     def __init__(self, name: str, description: str, price: float, quantity: int):
         pass
 
+    @classmethod
     @abstractmethod
     def create_product(cls, prod_dict):
         pass
